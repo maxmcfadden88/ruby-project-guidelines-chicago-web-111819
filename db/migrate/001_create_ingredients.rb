@@ -1,7 +1,6 @@
-class CreateIngredients < ActiveRecord::Migrate[5.2]
+class CreateIngredients < ActiveRecord::Migration[5.0]
     def change
         create_table :ingredients do |t|
-            t.integer :id
             t.string :name
             t.float :price
         end
