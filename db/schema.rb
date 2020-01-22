@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 3) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
-    t.float  "price"
   end
 
   create_table "recipes", force: :cascade do |t|
