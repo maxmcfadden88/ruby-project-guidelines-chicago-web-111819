@@ -3,26 +3,47 @@ require_relative 'runner_methods'
 
 ActiveRecord::Base.logger = nil
 
-# 1 View a list of dishes *****
-# 2 View ingredients in a dish
-# 3 Input an ingredient and see dishes that include/do not include it
-# 4 Create a dish by adding ingredients
+# ENTER A UDERNAME(C)
+# VIEW LIST OF dishes (R) ***
+# SELECT A DISH FOR MORE INFO (R)
+# ADD A DISH TO YOUR FAVORITES (U)
+# DELETE A DISH FROM YOUR FAVORITES (D)
+# REACH GOALS ENTER AN Ingredient TO SEARCH
+# VIEW MOST FAVORITED DISHES
+
+#edit username
+#add favorite
+#delete favorite
+#replace favorite
+
+
 
 clear_screen
 
-puts "HELLO, WELCOME TO COOKBOOK"
+welcome
 
-puts "Please select from the following options:"
+user_intro
 
-puts "1: View a list of available dishes"
-puts "2: View a list of ingredient used in this cookbook"
-puts "3: View our ingredientsd arranged by price"
+user_home
 
-if user_input == "1"
+    # puts "Please select from the following options"
+
+    # puts "1: Discover a new favorite! Browse our available dishes."
+
+    # puts "2: Edit your account"
+
+
+
+
+case user_input_option_selection
+when "1"
     puts Dish.names_by_alpha
-    # puts "Enter "1" to return to home or enter a dish name to see its ingredients"
-elsif user_input == "2"
-    puts Ingredient.names_by_alpha
+
+when "2"
+    
+
+when "3"
+
 else
     clear_screen
 end

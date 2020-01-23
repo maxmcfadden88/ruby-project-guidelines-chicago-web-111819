@@ -1,6 +1,6 @@
 class Dish < ActiveRecord::Base
-    has_many :recipes
-    has_many :ingredients ,through: :recipes
+    has_many :favorites
+    has_many :users, through: :favorites
 
     def self.names_by_alpha
         ordered = self.order(:name)
