@@ -1,12 +1,8 @@
 require 'pry'
 require 'faker'
 
-# Recipe.destroy_all
-# Ingredient.destroy_all
-# Dish.destroy_all
-
 100.times do
-    Ingredient.create(name: Faker::Food.ingredient)
+    Ingredient.create(name: Faker::Food.ingredient, price: rand(1..20))
  end
  
 100.times do
