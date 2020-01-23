@@ -14,16 +14,17 @@ ActiveRecord::Schema.define(version: 3) do
 
   create_table "dishes", force: :cascade do |t|
     t.string "name"
+    t.string "ingredients"
+    t.string "cuisine"
   end
 
-  create_table "ingredients", force: :cascade do |t|
-    t.string "name"
-    t.float  "price"
-  end
-
-  create_table "recipes", force: :cascade do |t|
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
     t.integer "dish_id"
-    t.integer "ingredient_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
   end
 
 end
