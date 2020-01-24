@@ -6,4 +6,7 @@ class Dish < ActiveRecord::Base
         ordered = self.order(:name)
         ordered.map(&:name).uniq
     end
+
+    # @dish_details = "Name: #{self.name} Cuisine: #{self.cuisine} Ingredients: #{self.ingredients}"
+
 end

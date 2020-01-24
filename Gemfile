@@ -6,4 +6,5 @@ gem "sqlite3"
 gem "pry"
 gem "require_all"
 gem "faker"
+gem "colorize"
 #todo require net http or rest api
