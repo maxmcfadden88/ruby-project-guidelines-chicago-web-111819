@@ -80,6 +80,7 @@ def more_details
         Favorite.create(user_id: @logged_in_user.id, dish_id: @selected_dish.id)
         puts "#{@selected_dish.name} has been added to your favorites!"
         sleep(2)
+        @logged_in_user.reload
         "home page"
     when y_n_response == "n"
         "home page"
@@ -97,6 +98,7 @@ def delete_a_favorite
     to_destroy.destroy
     puts
     puts "#{dish_selection} has been deleted from your favorites."
+    @logged_in_user.reload
     sleep(2)
 end
 
@@ -130,6 +132,7 @@ def most_popular_dish
         when y_n_response == "y"
             Favorite.create(user_id: @logged_in_user.id, dish_id: current_most_popular.id)
             puts "#{current_most_popular.name} has been added to your favorites!"
+            @logged_in_user.reload
             sleep(2)
             "home page"
         when y_n_response == "n"
