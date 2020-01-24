@@ -1,8 +1,5 @@
 class Favorite < ActiveRecord::Base
-    belongs_to :users
-    belongs_to :dishes
-
-
-   
+    belongs_to :user
+    belongs_to :dish
 
 end

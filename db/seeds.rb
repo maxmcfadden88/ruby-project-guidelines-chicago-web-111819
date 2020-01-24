@@ -15,12 +15,12 @@ require 'faker'
     mussels = Dish.create(name: "Mussels in beer broth", ingredients: "Mussels, Beer, Stock", cuisine: "American")
     sushi = Dish.create(name: "Sushi", ingredients: "Rice, Fish, Nori", cuisine: "Japanese")
     chicken_soup = Dish.create(name: "Chicken Noodle Soup", ingredients: "Broth, Noodles, Chicken", cuisine: "American")
-end
+
 
 10.times do
     User.create(name: Faker::Name.name)
 end
 
 5.times do
-    Favorite.create(user_id: rand(0..10), dish_id: rand(0..10))
+    Favorite.create(user_id: rand(1..10), dish_id: rand(1..10))
 end
