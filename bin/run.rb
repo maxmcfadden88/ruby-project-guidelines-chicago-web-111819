@@ -7,10 +7,10 @@ ActiveRecord::Base.logger = nil
 # VIEW LIST OF dishes (R) ***
 # SELECT A DISH FOR MORE INFO (R) ****
 # ADD A DISH TO YOUR FAVORITES (U) ****
-# DELETE A DISH FROM YOUR FAVORITES (D)
+# DELETE A DISH FROM YOUR FAVORITES (D)*****
+# VIEW MOST FAVORITED DISHES*****
 
 # REACH GOALS ENTER AN Ingredient TO SEARCH
-# VIEW MOST FAVORITED DISHES
 
 USER_INPUT = ""
 
@@ -38,29 +38,16 @@ while USER_INPUT != "exit"
 
     when "2"
         delete_a_favorite
+        USER_INPUT = "home page"
 
     when "3"
-        puts "you selected 3"
-
+        most_popular_dish
+        USER_INPUT = "home page"
     end
 end
 
+puts
 puts "Thanks for using our Cookbook app!"
+puts
    
-
-
-
-
-# case user_input_option_selection
-# when "1"
-#     puts Dish.names_by_alpha
-
-# when "2"
-    
-
-# when "3"
-
-# else
-#     clear_screen
-# end
 
